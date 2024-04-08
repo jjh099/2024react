@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:link,/*방문한적 없는 링크*/
+  a:visited /*방문한 링크*/ {
+  /* 링크에 밑줄 제거*/
+  text-decoration: none;
+  color: #222;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+$primary-color: skyblue;
+$second-color: pink;
+$fontSize: 20px;
+$fontColor: white;
+$shadow: 0 0 10px rgba(0, 0, 0.3);
+//    가로 세로 흐림정도
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: $primary-color;
+  font-size: $fontSize;
+  color: $fontColor;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    background: skyblue;
+  }
+  .gnbMenu {
+    ul {
+      display: flex;
+    }
+  }
+}
