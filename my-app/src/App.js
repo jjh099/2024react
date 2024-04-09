@@ -17,8 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Main vData={vData} />} />
         <Route path="/com" element={<Company />} />
+        {/* Company 컴포넌트 path를 /com으로 설정 */}
         <Route path="/pro/:item" element={<Product vData={vData} />} />
         <Route path="/comm" element={<Community />} />
+        {/* Community 컴포넌트 path를 /comm으로 설정 */}
       </Routes>
 
       <Footer />
