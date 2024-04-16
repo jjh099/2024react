@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./assets/css/style.scss";
 
-function App() {
+function App_pagination() {
   //  초기상태가 빈 배열인 viewData 변수 생성
   const [viewData, setViewData] = useState([]);
 
@@ -70,21 +70,11 @@ function App() {
 
       <div className="pagination">
         <div>이전</div>
-        <ul className="page">{pageNumber}</ul>
+        {/* <ul className="page">{pageNumber()}</ul> */}
         <div>다음</div>
       </div>
     </>
   );
 }
 
-export default App;
-
-{
-  /* <li
-  onClick={() => {
-    setCurrentPage(currentPage - 1);
-  }}
->
-  이전
-</li>; */
-}
+export default App_pagination;
