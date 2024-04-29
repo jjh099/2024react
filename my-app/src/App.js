@@ -1,31 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./assets/css/tStyle.scss";
-import axios from "axios";
-import { getUser } from "./api/api";
+import { Provider } from "react-redux";
+import ChildOne from "./components/ChildOne";
+import store from "./store/store.js";
 
 function App() {
-  const [userData, setUserData] = useState([]);
-
-  useEffect(() => {
-    const callApi = async () => {
-      try {
-        const user = await axios.getUser();
-        setUserData("useeffect " + user.user);
-        console.log(user.data.user);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    callApi();
-  }, []);
-  console.log(userData);
-
-  return;
-  <div>
-    {userData?.map(function (item, idx) {
-      return <li>{item.email}</li>;
-    })}
-  </div>;
+  return (
+    <div>
+      <Provider store={store}>
+        <h3>title:toolkit</h3>
+        <ChildOne />
+      </Provider>
+    </div>
+  );
 }
+
 export default App;
